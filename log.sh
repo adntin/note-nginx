@@ -24,7 +24,7 @@ mkdir -p $BAK_DIR
 
 # 移动日志文件(备份)
 mv $LOG_PATH $BAK_PATH
-# 重要提示: 移动文件之后, 此时访问网站, 访问记录放在 /var/log/nginx/test.daxiaodiao.com/xxx.log 中, 因为 linux 实际是根据 inode 指向磁盘文件
+# 重要提示: 移动文件之后, 此时访问网站, 访问记录放在 /var/log/nginx/test.daxiaodiao.com/YYYY_MM/DD.access.log 中, 因为 linux 实际是根据 inode 指向磁盘文件
 
 # 重新生成 access.log 文件, 实际是 nginx 重新生成 inode 指向
 kill -USR1 `cat /root/nginx/logs/nginx.pid`
